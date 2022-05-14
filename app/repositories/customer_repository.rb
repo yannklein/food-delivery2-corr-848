@@ -13,6 +13,10 @@ class CustomerRepository
     @customers
   end
 
+  def find(id)
+    @customers.find { |customer| customer.id == id }
+  end
+
   def create(customer)
     # customer doesn't have an id yet!
     # 1. define an id for the customer

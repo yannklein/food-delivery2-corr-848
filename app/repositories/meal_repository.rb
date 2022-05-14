@@ -13,6 +13,10 @@ class MealRepository
     @meals
   end
 
+  def find(id)
+    @meals.find { |meal| meal.id == id }
+  end
+
   def create(meal)
     # meal doesn't have an id yet!
     # 1. define an id for the meal
